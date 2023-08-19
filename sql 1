@@ -1,0 +1,4 @@
+SELECT t.topic_name, k.name AS task_name
+FROM topics t
+JOIN codekata k ON t.topic_id = k.topic_id
+WHERE EXTRACT(MONTH FROM k.date) = 10;

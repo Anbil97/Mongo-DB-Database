@@ -1,0 +1,5 @@
+SELECT COUNT(DISTINCT a.user_id) AS num_users
+FROM attendance a
+LEFT JOIN tasks t ON a.user_id = t.user_id AND a.kata_id = t.kata_id
+WHERE a.date BETWEEN '2020-10-15' AND '2020-10-31'
+AND (t.task_id IS NULL OR t.submission_date IS NULL);

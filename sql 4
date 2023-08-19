@@ -1,0 +1,4 @@
+SELECT u.name, COUNT(t.task_id) AS problems_solved
+FROM users u
+LEFT JOIN tasks t ON u.user_id = t.user_id
+GROUP BY u.name;

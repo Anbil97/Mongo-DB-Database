@@ -1,0 +1,3 @@
+SELECT *
+FROM mentors
+WHERE mentee_count > 15;

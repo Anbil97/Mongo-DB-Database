@@ -1,0 +1,4 @@
+SELECT d.drive_name, u.name AS student_name
+FROM company_drives d
+JOIN attendance a ON d.drive_date = a.date
+JOIN users u ON a.user_id = u.user_id;
